@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Authenticated user profile entity",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["uid"]
+    },
+    "Chat": {
+      "title": "Chat Flow",
+      "description": "User chat conversation session",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string", "maxLength": 200 },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "lastMessageSnippet": { "type": "string" }
+      },
+      "required": ["id", "userId", "title"]
+    },
+    "Message": {
+      "title": "Chat Message",
+      "description": "Individual chat message record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "chatId": { "type": "string" },
+        "userId": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "assistant"] },
+        "content": { "type": "string", "maxLength": 50000 },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["id", "chatId", "userId", "role", "content"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profile collection isolated by user UID"
+    },
+    "/chats/{chatId}": {
+      "schema": { "$ref": "#/entities/Chat" },
+      "description": "User conversation list isolated by user UID"
+    },
+    "/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/Message" },
+      "description": "User messages isolated by user UID"
+    }
+  }
+}

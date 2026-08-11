@@ -1,0 +1,10 @@
+{
+  "name": "FloAI",
+  "description": "Your AI. Your Flow. Chat, create, explore, and solve with FloAI.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

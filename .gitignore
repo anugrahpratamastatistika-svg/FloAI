@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Production and build outputs
+dist/
+build/
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Sensitive credentials & keys
+credentials.json
+service-account.json
+*.pem
+*.key
+
+# System and logs
+.DS_Store
+*.log
+
