@@ -1,5 +1,5 @@
 {
-  "projectId": "premis-seni-s6shk",
+  "projectId": "artful-premise-s6shk",
   "appId": "1:410212298188:web:4a69efe98e5640f9a68169",
   "apiKey": "AIzaSyCZsMZABZCB23r4xBc8XwGjQuThSbF-6qM",
   "authDomain": "artful-premise-s6shk.firebaseapp.com",
@@ -7,6 +7,6 @@
   "storageBucket": "artful-premise-s6shk.firebasestorage.app",
   "messagingSenderId": "410212298188",
   "measurementId": "",
-  "oauthClientId": "410212298188-vv109ojiglg4cjpqg10f1j9qc84muh0a.apps.googleusercontent.com",
+  "oAuthClientId": "410212298188-vv109ojiglg4cjpqg10f1j9qc84muh0a.apps.googleusercontent.com",
   "recaptchaSiteKey": ""
 }
